@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+// @author Nipun Kataria
+
+public class Mult_Div
+{	
+	public static void main(String[] args)
+	{
+	double x, y, ef1, ef2,Product, Quotient, err1, err2,Erterm;
+	Scanner value1 = new Scanner(System.in);                          // To take the input of the User
+	System.out.println("Press 'M' for Multiplication & 'D' for Division"); 
+	String operation = value1.next(); 
+	                                                                  //To read the string input of the User
+	if(operation.equals("M")) {
+    System.out.println("Enter the first number: ");                   //Enter the first number
+    x = value1.nextDouble();
+    Math.abs(x);                                             // to take the Absolute value of the term
+    System.out.println("Enter the first error term: ");               //Enter the first error term
+    err1 = value1.nextFloat();
+        System.out.println("Enter the second number: ");              //Enter the second number
+    y = value1.nextDouble();
+    Math.abs(y);                                         
+       System.out.println("Enter the second error term: ");           //Enter the second error term
+    err2 = value1.nextFloat();
+    ef1=err1/x;
+    ef2=err2/y;
+    Product=x*y;
+    Math.abs(Product);
+    Erterm=(ef1+ef2)*Product; 
+                                             // Calculation of the Product
+    
+    System.out.println("Result -->  "+"Product = " + Product+ " ± " + Erterm);   // Final Answer
+    }
+	
+	else if(operation.equals("D")) {
+		 System.out.println("Enter the first number: ");
+		    x = value1.nextDouble();
+		    Math.abs(x);
+		    System.out.println("Enter the first error term: ");
+		    err1 = value1.nextFloat();
+		        System.out.println("Enter the second number: ");
+		    y = value1.nextDouble();
+		    Math.abs(y);
+		       System.out.println("Enter the second error term: ");
+		    err2 = value1.nextFloat();
+		    ef1=err1/x;
+		    ef2=err2/y;
+		    Quotient=x/y;
+		    Math.abs(Quotient);
+		    Erterm=(ef1+ef2)*Quotient;
+		                                        // Calculation of the Division
+		    		     
+		    System.out.println("Result -->  " + "Quotient = " + Quotient + " ± " + Erterm);
+		    }
+	
+	else
+		System.out.println("Please select the correct Operation. Press 'M' for Multiplication & 'D' for Division"); // Error Message if user selects wrong input
+	}
+		
+	}
+
